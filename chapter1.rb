@@ -2,6 +2,45 @@
 # from Chapter 1 - Beginning Ruby
 
 
+# some class inheritance
+class Pet
+	attr_accessor :name, :age, :gender, :color
+end
+
+class Cat < Pet
+end
+
+class Dog < Pet
+	# a simple method
+	def bark
+		puts "Woof!"
+	end
+		
+end
+
+class Snake < Pet
+	attr_accessor :length #adding a property not already defined in parent 'Pet'
+end
+
+snake = Snake.new
+snake.name = "Sammy"
+snake.length = 500
+
+lassie = Dog.new
+lassie.name = "Lassie"
+lassie.age = 20
+
+# lassie barks a lot
+10.times do
+	lassie.bark
+end
+
+
+	
+
+
+
+
 
 # let's make a class
 class Person
