@@ -14,26 +14,36 @@ end
 Shoes.app :title => "GVSU Webcams", :width => 900, :height => 547 do
 
 @webcams = [
-
-
-	Webcam.new('Cook Clock Tower - South',
+	Webcam.new('Clock Tower - South',
 			   'http://148.61.37.229/axis-cgi/jpg/image.cgi?resolution=320x240',
 			   'http://148.61.37.229/axis-cgi/jpg/image.cgi?resolution=640x480'),
-	Webcam.new('Cook Clock Tower - North',
+	Webcam.new('Clock Tower - North',
 			   'http://148.61.142.228/axis-cgi/jpg/image.cgi?resolution=320x240',
 			   'http://148.61.142.228/axis-cgi/jpg/image.cgi?resolution=640x480'),
-	Webcam.new('Campus Drive',
-			   'http://148.61.165.230/axis-cgi/jpg/image.cgi?resolution=320x240',
-			   'http://148.61.165.230/axis-cgi/jpg/image.cgi?resolution=640x480'),
+	Webcam.new('Zumberge Pond',
+			   'http://148.61.142.227/axis-cgi/jpg/image.cgi?resolution=320x240',
+			   'http://148.61.142.227/axis-cgi/jpg/image.cgi?resolution=640x480'),
+	Webcam.new('CHS Indoor Plaza',
+			   'http://148.61.171.201/axis-cgi/jpg/image.cgi?resolution=320x240',
+			   'http://148.61.171.201/axis-cgi/jpg/image.cgi?resolution=640x480'),
 	Webcam.new('Great Lakes Plaza',
 			   'http://148.61.97.229/axis-cgi/jpg/image.cgi?resolution=320x240',
 			   'http://148.61.97.229/axis-cgi/jpg/image.cgi?resolution=640x480'),
+	Webcam.new('Campus Drive',
+			   'http://148.61.165.230/axis-cgi/jpg/image.cgi?resolution=320x240',
+			   'http://148.61.165.230/axis-cgi/jpg/image.cgi?resolution=640x480'),
+	Webcam.new('Downtown Campus',
+			   'http://148.61.151.202/axis-cgi/jpg/image.cgi?resolution=320x240',
+			   'http://148.61.151.202/axis-cgi/jpg/image.cgi?resolution=640x480'),
 	Webcam.new('Mackinac Hall',
 			   'http://148.61.229.201/axis-cgi/jpg/image.cgi?resolution=320x240',
 			   'http://148.61.229.201/axis-cgi/jpg/image.cgi?resolution=640x480'),
+	Webcam.new('Kleniner Commons',
+			   'http://148.61.253.219/axis-cgi/jpg/image.cgi?resolution=320x240',
+			   'http://148.61.253.219/axis-cgi/jpg/image.cgi?resolution=640x480'),
 	Webcam.new('Laker Turf Building',
 			   'http://148.61.63.218/axis-cgi/jpg/image.cgi?resolution=320x240',
-			   'http://148.61.63.218/axis-cgi/jpg/image.cgi?resolution=640x480'),			   
+			   'http://148.61.63.218/axis-cgi/jpg/image.cgi?resolution=640x480')			   
 	
 ]
 
@@ -62,7 +72,7 @@ Shoes.app :title => "GVSU Webcams", :width => 900, :height => 547 do
 	flow :left => 0, :top => 67, :height => 480, :width => 260, :scroll => true do
 	
 		@webcams.each{ |webcam|
-			stack :height => 60, :width => 260 do
+			stack :height => 60, :width => 260 do				
 				webcam.thumb += "&time=" +  Time.now.strftime("%I%M%S%m%d%Y")
 				image webcam.thumb, :width => 80, :height => 60
 				para webcam.name, :top => 0, :left => 80
