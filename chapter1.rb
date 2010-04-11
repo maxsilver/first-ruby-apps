@@ -2,6 +2,10 @@
 # from Chapter 1 - Beginning Ruby
 
 
+#Constants are capatilized
+PI = 3.14159265428 #never change that!
+my_age = 21 # this changes
+
 #simple conditionals
 age = 9000
 puts "You're not born?"    if age < 0
