@@ -2,6 +2,12 @@
 # from Chapter 1 - Beginning Ruby
 
 
+# Interpolation (somewhat similar to php strings including $variables)
+x = 20
+y = 50
+puts "#{x} + #{y} = #{x + y}"
+puts "\n\n"
+
 # A different way to make string literals
 X = %q{
 	We hold these truths to be self-evident, 
@@ -34,15 +40,15 @@ puts "You're likely dead!" if age >= 150 && age < 9000
 puts "You're a mummy!"     if age >= 9000
 
 # there are lots of useful methods built into default objects ('datatypes')
-verse = "We hold these truths to be self-evident, that all men are created equal..."
-puts verse, "\n"
-puts verse.length, "\n"
-puts verse.upcase, "\n"
-puts verse.reverse, "\n"
-puts verse.swapcase.reverse.sum, "\n"
+#verse = "We hold these truths to be self-evident, that all men are created equal..."
+#puts verse, "\n"
+#puts verse.length, "\n"
+#puts verse.upcase, "\n"
+#puts verse.reverse, "\n"
+#puts verse.swapcase.reverse.sum, "\n"
 
 # turns out, put is a method of a class (a superclass). Ruby's object is called 'Kernel'
-Kernel.puts "the method 'puts' is from class type : ", Kernel.class
+#Kernel.puts "the method 'puts' is from class type : ", Kernel.class
 
 
 # some class inheritance
@@ -74,7 +80,7 @@ lassie.name = "Lassie"
 lassie.age = 20
 
 # lassie barks a lot
-3.times do
+0.times do
 	lassie.bark
 end
 
@@ -101,12 +107,12 @@ FunnyMan.gender   = "male"
 FunnyMan.hometown = "New York, NY"
 
 
-print "Our next guest is ", FunnyMan.name, 
-	   " from beautiful ", FunnyMan.hometown,
-	   "\n"
+#print "Our next guest is ", FunnyMan.name, 
+#	   " from beautiful ", FunnyMan.hometown,
+#	   "\n"
 
 # a simple loop
-3.times do print "Hello, World!" + "\n" end
+0.times do print "Hello, World!" + "\n" end
 
 # commas can concatinate print requests, similar to PHP echo("string", "string")
-print "Hello. Did you know that 2 + 2 = ", (2 + 2)
+#print "Hello. Did you know that 2 + 2 = ", (2 + 2)
