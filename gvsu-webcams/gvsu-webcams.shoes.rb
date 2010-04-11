@@ -57,11 +57,11 @@ Shoes.app :title => "GVSU Webcams", :width => 900, :height => 547, :resizable =>
 	
 	stack :left => 260, :top => 67, :width => 640, :height => 480 do
 		background black
-		@viewer = image imgpath, :width => 640, :height => 480
+		@viewer = image "", :width => 640, :height => 480
 	end
 	
 	stack :left => 260, :top => 547, :width => 640, :height => 480 do
-		@viewer2 = image imgpath, :width => 640, :height => 480
+		@viewer2 = image "", :width => 640, :height => 480
 	end	
 
 	@timer = every 1 do
