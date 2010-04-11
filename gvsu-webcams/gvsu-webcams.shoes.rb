@@ -11,7 +11,7 @@ class Webcam
 	end
 end
 
-Shoes.app :title => "GVSU Webcams", :width => 900, :height => 547 do
+Shoes.app :title => "GVSU Webcams", :width => 900, :height => 547, :resizable => false do
 
 @webcams = [
 	Webcam.new('Clock Tower - South',
@@ -82,7 +82,7 @@ Shoes.app :title => "GVSU Webcams", :width => 900, :height => 547 do
 					else
 						imgpath = webcam.feed
 						@viewer.path = webcam.thumb
-						@viewer2.path = imgpath + "&time=" +  Time.now.strftime("%I%M%S%m%d%Y")
+						@viewer2.path = webcam.thumb
 					end
 				end
 				
