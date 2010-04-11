@@ -2,6 +2,13 @@
 # from Chapter 1 - Beginning Ruby
 
 
+
+
+
+# turns out, put is a method of a class (a superclass). Ruby's object is called 'Kernel'
+Kernel.puts "the method 'puts' is from class type : ", Kernel.class
+
+
 # some class inheritance
 class Pet
 	attr_accessor :name, :age, :gender, :color
